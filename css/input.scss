@@ -1,0 +1,19 @@
+.main-container {
+  background-color: #000;
+}
+
+.main-container__title {
+  color: #7fffd4;
+  font-size: 24px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #ffe4c4;
+  }
+}
+
+.bg-container {
+  background-color: #65ded4;
+  height: 250px;
+  width: 50%;
+}
