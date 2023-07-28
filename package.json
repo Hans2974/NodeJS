@@ -13,9 +13,6 @@
   ],
   "author": "rocket-pencil",
   "license": "ISC",
-  "dependencies": {
-    "sass": "^1.55.0"
-  },
   "devDependencies": {
     "postcss": "^8.4.16",
     "stylelint": "^14.12.1",
