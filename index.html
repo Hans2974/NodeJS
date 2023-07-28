@@ -8,6 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <title>Document</title>
     <style>
         
@@ -23,6 +24,14 @@
     <div class="border" id="original-text">
         linkify demo: http://www.google.com
     </div>
+    <pre>
+        <code class="language-html">
+            for(var i = 1; i <= 10; ++i){
+                console.log(i);
+            }
+        </code>
+    </pre>
+    <div id="qrcode"></div>
     <p class="wow bounce">
         我只有在出現時才會呈現特效喔！分支!
     </p>
@@ -35,10 +44,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/linkifyjs@4.1.1/dist/linkify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/linkify-html@4.1.1/dist/linkify-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
     <script>
         new WOW().init();
 
-        
+        hljs.highlightAll();
+
+        $('#qrcode').qrcode("this plugin is great chinese cant read");
+
         const options = { defaultProtocol: 'https' };
         let a = linkifyHtml('Any links to github.com here? If not, contact test@example.com', options);
         console.log(a);
